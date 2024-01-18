@@ -53,7 +53,7 @@
     </header>
     <main>
       <section class="hero-image">
-        <div class="container">
+        <div class="container container-hero-image">
           <h1 class="hero-image-title">
             Effective Solutions for Your Business
           </h1>
@@ -450,16 +450,34 @@
         <div class="footer-email-input">
           <form class="form-email-input">
             <div class="div-label">
-              <label class="email-label">Subscribe <svg class="paper-plain-icon" width="24px" hight="24">
-                <use href="./images/icons.svg#paper-plain-icon"></use>
-              </svg>
-            </label>
+              <label class="email-label">Subscribe</label>
               <input type="email" class="email-input" placeholder="E-mail" />
             </div>
-            <button type="submit" class="footer-btn-subscribe">Subscribe</button>
+            <button type="submit" class="footer-btn-subscribe">Subscribe<svg class="paper-plain-icon" width="24px" hight="24">
+              <use href="./images/icons.svg#paper-plain-icon"></use>
+            </svg></button>
           </form>
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button type="button"></button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <div class="all-inputs-container">
+          <label class="modal-label" for="name">Name</label>
+          <input name="name" type="text" class="modal-input" id='name' required/>
+          <label class="modal-label" for="phone">Phone</label>
+          <input name="phone" type="tel" class="modal-input" id='phone' required/>
+          <label class="modal-label" for="email">Email</label>
+          <input name="email" type="email" class="modal-input" id='email' required/>
+          <label class="modal-label" for="comment">Comment</label>
+          <textarea name="comment" type="text" class="modal-input" id='comment' placeholder="Text input"></textarea>
+        </div>
+        <input class="modal-polisy-checkbox" type="checkbox" name="policy" id="policy" required>
+        <label class="modal-label" for="policy">I accept the terms and conditions of the <a class="link-privacy-policy" href="">Privacy Policy</a></label>
+        <button type="submit" class="modal-btn">Send</button>
+      </div>
+    </div>
   </body>
 </html>
