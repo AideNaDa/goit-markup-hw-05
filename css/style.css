@@ -535,11 +535,25 @@ img{
 .email-input {
     background-color: transparent;
     border-radius: 4px;
-    border: 1px solid var(--WHITE, #FFF);
+    border: 1px solid #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     width: 264px;
     height: 40px;
     padding-left: 16px;
+    color: var(--WHITE, #FFF);
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    outline: none;
+}
+
+
+.email-input:placeholder-shown{
+    border: 1px solid #fff;
+}
+
+.email-input:hover{
+    border: 1px solid #4D5AE5;
 }
 
 .email-input::placeholder {
@@ -575,12 +589,12 @@ img{
 
 .footer-btn-subscribe:focus,
 .footer-btn-subscribe:hover {
-    background-color: #404BBF;
+    background-color: #31D0AA;
 }
 
 /* ========================================== */
 
-/* ==================FOOTER================== */
+/* ==================BACKDROP================== */
 
 .backdrop {
     width: 100%;
@@ -607,15 +621,26 @@ img{
     margin-left: auto;
     margin-bottom: 24px;
     display: block;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #D0D2E3;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-close-btn:hover,
+.modal-close-btn:focus{
+    background-color: #404BBF;
+}
 
 
 .all-inputs-container{
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 16px;
     justify-content: center;
 }
 
@@ -629,16 +654,78 @@ img{
     letter-spacing: 0.02em;
 }
 
-.modal-input {
-    border-radius: 4px;
-    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
-    width: 360px;
-    height: 40px;
-    padding-left: 16px;
+.modal-label{
+    display: block;
+    color: var(--LIGHT-SLATE, #8E8F99);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
 }
 
-.modal-polisy-checkbox {
-    margin-bottom: 24px;
+.model-field{
+    margin-bottom: 8px;
+}
+
+.modal-input-wrap{
+    position: relative;
+}
+
+.modal-input {
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    padding-left: 38px;
+}
+
+.modal-input:focus{
+    border-color: #4D5AE5;
+}
+
+.modal-input:focus + .modal-input-icon{
+    fill: #4D5AE5;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-icon{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-input::placeholder{
+    color: var(--LIGHT-SLATE, #8E8F99);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+} 
+
+.modal-comment{
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    padding: 8px 16px 0;
+    height: 120px;
+}
+
+.modal-cooment::placeholder {
+    color: var(--LIGHT-SLATE, #8E8F99);
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.modal-comment:focus {
+    border-color: #4D5AE5;
 }
 
 .policy-container{
@@ -647,18 +734,9 @@ img{
     align-items: center;
 }
 
-.modal-label{
-    color: var(--LIGHT-SLATE, #8E8F99);
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-}
 
-.modal-input::placeholder{
-    color: var(--LIGHT-SLATE, #8E8F99);
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
+.modal-polisy-checkbox {
+    margin-bottom: 24px;
 }
 
 .link-privacy-policy{
