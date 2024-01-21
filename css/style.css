@@ -765,7 +765,7 @@ img{
     align-items: center;
 }
 
-.modal-label.policy span{
+.modal-label.policy .active-checkbox{
     display: inline-flex;
 }
 
