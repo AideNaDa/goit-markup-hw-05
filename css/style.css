@@ -765,6 +765,10 @@ img{
     align-items: center;
 }
 
+.modal-label.policy span{
+    display: inline-flex;
+}
+
 
 .modal-polisy-checkbox {
 }
